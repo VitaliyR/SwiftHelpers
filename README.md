@@ -22,7 +22,7 @@ pod 'SwiftHelpers'
 
 ## Author
 
-vitaliyr, vit@ribachenko.com
+Vitaliy Ribachenko <vit@ribachenko.com>
 
 ## License
 

@@ -9,18 +9,66 @@
 /* Begin PBXBuildFile section */
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		72FB183539EE284BCE1F161B /* Pods_SwiftHelpers_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 173CCB5F53A5E22C3CBAFF95 /* Pods_SwiftHelpers_Tests.framework */; };
+		EC4EC769222EEEE8003A9B08 /* Nil.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC768222EEEE8003A9B08 /* Nil.swift */; };
+		EC4EC76C222EEF11003A9B08 /* CGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC76B222EEF11003A9B08 /* CGColor.swift */; };
+		EC4EC76E222EEF1F003A9B08 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC76D222EEF1F003A9B08 /* UIColor.swift */; };
+		EC4EC770222EEF31003A9B08 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC76F222EEF31003A9B08 /* Collection.swift */; };
+		EC4EC772222EEF42003A9B08 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC771222EEF42003A9B08 /* Date.swift */; };
+		EC4EC774222EEF4F003A9B08 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC773222EEF4F003A9B08 /* Formatter.swift */; };
+		EC4EC776222EEF5D003A9B08 /* NSAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC775222EEF5D003A9B08 /* NSAttributedString.swift */; };
+		EC4EC778222EEF76003A9B08 /* NSManagedObjectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC777222EEF76003A9B08 /* NSManagedObjectContext.swift */; };
+		EC4EC77C222EF1CE003A9B08 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC77B222EF1CE003A9B08 /* NSObject.swift */; };
+		EC4EC77E222EF1F5003A9B08 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC77D222EF1F5003A9B08 /* String.swift */; };
+		EC4EC780222EF203003A9B08 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC77F222EF203003A9B08 /* UIButton.swift */; };
+		EC4EC782222EF217003A9B08 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC781222EF217003A9B08 /* UIImage.swift */; };
+		EC4EC784222EF22E003A9B08 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC783222EF22E003A9B08 /* UITableView.swift */; };
+		EC4EC786222EF23A003A9B08 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC785222EF23A003A9B08 /* UIView.swift */; };
+		EC4EC788222EF253003A9B08 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC787222EF253003A9B08 /* EventManager.swift */; };
+		EC4EC78A222EF26B003A9B08 /* FilesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC789222EF26B003A9B08 /* FilesStorage.swift */; };
+		EC4EC78D222EF2B6003A9B08 /* BackgroundCapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC78C222EF2B6003A9B08 /* BackgroundCapable.swift */; };
+		EC4EC78F222EF2FB003A9B08 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC78E222EF2FB003A9B08 /* Localizable.swift */; };
+		EC4EC791222EF32E003A9B08 /* ObjectAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC790222EF32E003A9B08 /* ObjectAssociation.swift */; };
+		EC4EC793222EF358003A9B08 /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC792222EF358003A9B08 /* XibView.swift */; };
+		EC4EC796222EF37C003A9B08 /* LabelsCapableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC795222EF37C003A9B08 /* LabelsCapableView.swift */; };
+		EC4EC798222EF3A2003A9B08 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC797222EF3A2003A9B08 /* KeyboardViewController.swift */; };
+		EC4EC79A222EF571003A9B08 /* CommonHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC799222EF571003A9B08 /* CommonHelpers.swift */; };
+		EC4EC79C222EFA41003A9B08 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC79B222EFA41003A9B08 /* UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		173CCB5F53A5E22C3CBAFF95 /* Pods_SwiftHelpers_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftHelpers_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		30F964D3F0F17F2AA175E83A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		30F964D3F0F17F2AA175E83A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		5ABB66DE09A90147C8A9D68D /* Pods-SwiftHelpers_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftHelpers_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftHelpers_Tests/Pods-SwiftHelpers_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E85F9A90E5D8C0E31CDBDEE /* Pods-SwiftHelpers_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftHelpers_Tests.release.xcconfig"; path = "Target Support Files/Pods-SwiftHelpers_Tests/Pods-SwiftHelpers_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* SwiftHelpers_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftHelpers_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		6771D14F9F5D12D3D9930B5A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		6CF499F1FE7A950FC4C730D9 /* SwiftHelpers.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SwiftHelpers.podspec; path = ../SwiftHelpers.podspec; sourceTree = "<group>"; };
+		6771D14F9F5D12D3D9930B5A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		6CF499F1FE7A950FC4C730D9 /* SwiftHelpers.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftHelpers.podspec; path = ../SwiftHelpers.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		EC4EC768222EEEE8003A9B08 /* Nil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nil.swift; sourceTree = "<group>"; };
+		EC4EC76B222EEF11003A9B08 /* CGColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGColor.swift; sourceTree = "<group>"; };
+		EC4EC76D222EEF1F003A9B08 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		EC4EC76F222EEF31003A9B08 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		EC4EC771222EEF42003A9B08 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		EC4EC773222EEF4F003A9B08 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		EC4EC775222EEF5D003A9B08 /* NSAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedString.swift; sourceTree = "<group>"; };
+		EC4EC777222EEF76003A9B08 /* NSManagedObjectContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedObjectContext.swift; sourceTree = "<group>"; };
+		EC4EC77B222EF1CE003A9B08 /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
+		EC4EC77D222EF1F5003A9B08 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		EC4EC77F222EF203003A9B08 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		EC4EC781222EF217003A9B08 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		EC4EC783222EF22E003A9B08 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		EC4EC785222EF23A003A9B08 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		EC4EC787222EF253003A9B08 /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
+		EC4EC789222EF26B003A9B08 /* FilesStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesStorage.swift; sourceTree = "<group>"; };
+		EC4EC78C222EF2B6003A9B08 /* BackgroundCapable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundCapable.swift; sourceTree = "<group>"; };
+		EC4EC78E222EF2FB003A9B08 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		EC4EC790222EF32E003A9B08 /* ObjectAssociation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectAssociation.swift; sourceTree = "<group>"; };
+		EC4EC792222EF358003A9B08 /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
+		EC4EC795222EF37C003A9B08 /* LabelsCapableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelsCapableView.swift; sourceTree = "<group>"; };
+		EC4EC797222EF3A2003A9B08 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		EC4EC799222EF571003A9B08 /* CommonHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonHelpers.swift; sourceTree = "<group>"; };
+		EC4EC79B222EFA41003A9B08 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +86,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				EC4EC764222EEE42003A9B08 /* Source */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
@@ -87,7 +136,6 @@
 				5ABB66DE09A90147C8A9D68D /* Pods-SwiftHelpers_Tests.debug.xcconfig */,
 				5E85F9A90E5D8C0E31CDBDEE /* Pods-SwiftHelpers_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -97,6 +145,70 @@
 				173CCB5F53A5E22C3CBAFF95 /* Pods_SwiftHelpers_Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC4EC764222EEE42003A9B08 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				EC4EC78B222EF2AE003A9B08 /* Protocols */,
+				EC4EC76A222EEEF9003A9B08 /* Extensions */,
+				EC4EC767222EEE9C003A9B08 /* Components */,
+			);
+			name = Source;
+			path = ../SwiftHelpers;
+			sourceTree = "<group>";
+		};
+		EC4EC767222EEE9C003A9B08 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EC4EC794222EF35F003A9B08 /* lib */,
+				EC4EC792222EF358003A9B08 /* XibView.swift */,
+				EC4EC797222EF3A2003A9B08 /* KeyboardViewController.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		EC4EC76A222EEEF9003A9B08 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EC4EC76B222EEF11003A9B08 /* CGColor.swift */,
+				EC4EC76D222EEF1F003A9B08 /* UIColor.swift */,
+				EC4EC76F222EEF31003A9B08 /* Collection.swift */,
+				EC4EC771222EEF42003A9B08 /* Date.swift */,
+				EC4EC773222EEF4F003A9B08 /* Formatter.swift */,
+				EC4EC775222EEF5D003A9B08 /* NSAttributedString.swift */,
+				EC4EC777222EEF76003A9B08 /* NSManagedObjectContext.swift */,
+				EC4EC77B222EF1CE003A9B08 /* NSObject.swift */,
+				EC4EC77D222EF1F5003A9B08 /* String.swift */,
+				EC4EC77F222EF203003A9B08 /* UIButton.swift */,
+				EC4EC781222EF217003A9B08 /* UIImage.swift */,
+				EC4EC783222EF22E003A9B08 /* UITableView.swift */,
+				EC4EC785222EF23A003A9B08 /* UIView.swift */,
+				EC4EC79B222EFA41003A9B08 /* UIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EC4EC78B222EF2AE003A9B08 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EC4EC78C222EF2B6003A9B08 /* BackgroundCapable.swift */,
+				EC4EC78E222EF2FB003A9B08 /* Localizable.swift */,
+				EC4EC790222EF32E003A9B08 /* ObjectAssociation.swift */,
+				EC4EC795222EF37C003A9B08 /* LabelsCapableView.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		EC4EC794222EF35F003A9B08 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				EC4EC768222EEEE8003A9B08 /* Nil.swift */,
+				EC4EC787222EF253003A9B08 /* EventManager.swift */,
+				EC4EC789222EF26B003A9B08 /* FilesStorage.swift */,
+				EC4EC799222EF571003A9B08 /* CommonHelpers.swift */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,14 +243,10 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					607FACCF1AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
-					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = P45988LAY3;
 						LastSwiftMigration = 0900;
-						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
 			};
@@ -226,7 +334,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC4EC76C222EEF11003A9B08 /* CGColor.swift in Sources */,
+				EC4EC793222EF358003A9B08 /* XibView.swift in Sources */,
+				EC4EC77E222EF1F5003A9B08 /* String.swift in Sources */,
+				EC4EC791222EF32E003A9B08 /* ObjectAssociation.swift in Sources */,
+				EC4EC79C222EFA41003A9B08 /* UIViewController.swift in Sources */,
+				EC4EC772222EEF42003A9B08 /* Date.swift in Sources */,
+				EC4EC796222EF37C003A9B08 /* LabelsCapableView.swift in Sources */,
+				EC4EC770222EEF31003A9B08 /* Collection.swift in Sources */,
+				EC4EC776222EEF5D003A9B08 /* NSAttributedString.swift in Sources */,
+				EC4EC774222EEF4F003A9B08 /* Formatter.swift in Sources */,
+				EC4EC78D222EF2B6003A9B08 /* BackgroundCapable.swift in Sources */,
+				EC4EC76E222EEF1F003A9B08 /* UIColor.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				EC4EC77C222EF1CE003A9B08 /* NSObject.swift in Sources */,
+				EC4EC798222EF3A2003A9B08 /* KeyboardViewController.swift in Sources */,
+				EC4EC778222EEF76003A9B08 /* NSManagedObjectContext.swift in Sources */,
+				EC4EC78A222EF26B003A9B08 /* FilesStorage.swift in Sources */,
+				EC4EC788222EF253003A9B08 /* EventManager.swift in Sources */,
+				EC4EC78F222EF2FB003A9B08 /* Localizable.swift in Sources */,
+				EC4EC79A222EF571003A9B08 /* CommonHelpers.swift in Sources */,
+				EC4EC786222EF23A003A9B08 /* UIView.swift in Sources */,
+				EC4EC769222EEEE8003A9B08 /* Nil.swift in Sources */,
+				EC4EC782222EF217003A9B08 /* UIImage.swift in Sources */,
+				EC4EC780222EF203003A9B08 /* UIButton.swift in Sources */,
+				EC4EC784222EF22E003A9B08 /* UITableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +410,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -324,7 +456,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -336,6 +468,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5ABB66DE09A90147C8A9D68D /* Pods-SwiftHelpers_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = P45988LAY3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -350,7 +483,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftHelpers_Example.app/SwiftHelpers_Example";
 			};
 			name = Debug;
 		};
@@ -358,6 +490,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5E85F9A90E5D8C0E31CDBDEE /* Pods-SwiftHelpers_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = P45988LAY3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -368,7 +501,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftHelpers_Example.app/SwiftHelpers_Example";
 			};
 			name = Release;
 		};
