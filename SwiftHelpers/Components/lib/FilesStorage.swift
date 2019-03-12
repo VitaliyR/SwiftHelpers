@@ -1,10 +1,10 @@
 import UIKit
 
-public class FilesStorage: NSObject {
-    typealias StorageType = String
+open class FilesStorage: NSObject {
+    public typealias StorageType = String
     
     private static var instances: [StorageType: FilesStorage] = [:]
-    static func getInstance(storageType: StorageType) -> FilesStorage {
+    public static func getInstance(storageType: StorageType) -> FilesStorage {
         if let instance = instances[storageType] {
             return instance
         } else {
@@ -18,7 +18,7 @@ public class FilesStorage: NSObject {
     
     let storageType: StorageType
     
-    init(storageType: StorageType) {
+    public init(storageType: StorageType) {
         self.storageType = storageType
     }
     
@@ -34,7 +34,7 @@ public class FilesStorage: NSObject {
         return url
     }
     
-    func save(image: UIImage, name: String) -> String? {
+    public func save(image: UIImage, name: String) -> String? {
         let fileUrl = getFolder().appendingPathComponent(name)
         if fileManager.fileExists(atPath: fileUrl.path) {
             do {
@@ -55,7 +55,7 @@ public class FilesStorage: NSObject {
         }
     }
     
-    func load(name: String) -> UIImage? {
+    public func load(name: String) -> UIImage? {
         let fileUrl = getFolder().appendingPathComponent(name)
         if exists(name: name) {
             return UIImage(contentsOfFile: fileUrl.path)
@@ -63,12 +63,12 @@ public class FilesStorage: NSObject {
         return nil
     }
     
-    func exists(name: String) -> Bool {
+    public func exists(name: String) -> Bool {
         let fileUrl = getFolder().appendingPathComponent(name)
         return fileManager.fileExists(atPath: fileUrl.path)
     }
     
-    func remove(name: String) {
+    public func remove(name: String) {
         let fileUrl = getFolder().appendingPathComponent(name)
         if fileManager.fileExists(atPath: fileUrl.path) {
             do {
@@ -78,7 +78,7 @@ public class FilesStorage: NSObject {
         }
     }
     
-    func removeAll(confirm: Bool) {
+    public func removeAll(confirm: Bool) {
         guard confirm else { return }
         
         do {
@@ -86,7 +86,7 @@ public class FilesStorage: NSObject {
         } catch {}
     }
     
-    func move(name: String, another storage: FilesStorage) {
+    public func move(name: String, another storage: FilesStorage) {
         let fileUrl = getFolder().appendingPathComponent(name)
         let newUrl = storage.getFolder().appendingPathComponent(name)
         

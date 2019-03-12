@@ -1,6 +1,6 @@
 import UIKit
 
-public class KeyboardViewController: UIViewController {
+open class KeyboardViewController: UIViewController {
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var contentViewHeightConstraint: NSLayoutConstraint!
     
@@ -13,7 +13,7 @@ public class KeyboardViewController: UIViewController {
         }
     }
     
-    override public func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -23,7 +23,7 @@ public class KeyboardViewController: UIViewController {
         NotificationCenter.default.removeObserver(self)
     }
     
-    override public func viewDidLayoutSubviews() {
+    override open func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.reposition()
     }

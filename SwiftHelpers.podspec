@@ -27,6 +27,7 @@ TODO: Add long description of the pod here.
   s.author           = { 'vitaliyr' => 'vit@ribachenko.com' }
   s.source           = { :git => 'https://github.com/vitaliyr/SwiftHelpers.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/sa1en'
+  s.swift_version = '4.0'
 
   #  s.ios.framework = 'UIKit'
   s.ios.deployment_target = '10.0'
@@ -39,5 +40,7 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit', 'CoreData', 'CoreLocation'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'Alamofire', '~> 4.8.1'
+  s.dependency 'AlamofireImage', '~> 3.5.0'
+  s.dependency 'SwiftyJSON', '~> 4.2.0'
 end

@@ -31,7 +31,7 @@ public extension UIButton {
         
         if state {
             guard existingSpinners.count == 0 else { return }
-            let spinner = Helpers.getSpinner()
+            let spinner = CommonHelpers.getSpinner()
             spinner.translatesAutoresizingMaskIntoConstraints = false
             spinner.color = titleLabel?.textColor
             addSubview(spinner)

@@ -48,4 +48,18 @@ public extension String {
         
         return try! NSMutableAttributedString(data: htmlData!, options: options, documentAttributes: nil)
     }
+    
+    var snakeCase: String {
+        return self.replacingOccurrences(of: "([A-Z])", with: " $1", options: .regularExpression, range: self.range(of: self))
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+            .replacingOccurrences(of: " ", with: "_")
+    }
+    
+    var int: Int? {
+        return Int(self)
+    }
+    
+    var double: Double? {
+        return Double(self)
+    }
 }

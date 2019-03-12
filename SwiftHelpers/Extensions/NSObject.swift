@@ -12,11 +12,7 @@ public extension NSObject {
     
     class func getClassNameUnderscored(for object: Any) -> String {
         let className = getClassName(for: object)
-        return className
-            .replacingOccurrences(of: "([A-Z])", with: " $1", options: .regularExpression, range: className.range(of: className))
-            .trimmingCharacters(in: .whitespacesAndNewlines)
-            .replacingOccurrences(of: " ", with: "_")
-            .uppercased()
+        return className.snakeCase.uppercased()
     }
     
     func getClassName() -> String {

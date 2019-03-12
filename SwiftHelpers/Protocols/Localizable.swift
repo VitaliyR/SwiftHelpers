@@ -36,9 +36,7 @@ extension UILabel: Localizable {
     @IBInspectable public var localizableKey: String? {
         get { return nil }
         set(key) {
-            DispatchQueue.main.async {
-                self.text = self.getTranslation(key)
-            }
+            self.text = self.getTranslation(key)
         }
     }
 }
@@ -47,9 +45,7 @@ extension UITextView: Localizable {
     @IBInspectable public var localizableKey: String? {
         get { return nil }
         set(key) {
-            DispatchQueue.main.async {
-                self.attributedText = self.getTranslation(key)?.html
-            }
+            self.attributedText = self.getTranslation(key)?.html
         }
     }
 }
@@ -58,9 +54,16 @@ extension UIBarItem: Localizable {
     @IBInspectable public var localizableKey: String? {
         get { return nil }
         set(key) {
-            DispatchQueue.main.async {
-                self.title = key?.uppercased().localized
-            }
+            self.title = key?.uppercased().localized
+        }
+    }
+}
+
+extension UINavigationItem: Localizable {
+    @IBInspectable public var localizableKey: String? {
+        get { return nil }
+        set(key) {
+            self.title = key?.uppercased().localized
         }
     }
 }
@@ -69,9 +72,7 @@ extension UIButton: Localizable {
     @IBInspectable public var localizableKey: String? {
         get { return nil }
         set(key) {
-            DispatchQueue.main.async {
-                self.setTitle(self.getTranslation(key), for: .normal)
-            }
+            self.setTitle(self.getTranslation(key), for: .normal)
         }
     }
 }
@@ -80,9 +81,7 @@ extension UITextField: Localizable {
     @IBInspectable public var localizableKey: String? {
         get { return nil }
         set(key) {
-            DispatchQueue.main.async {
-                self.placeholder = self.getTranslation(key)
-            }
+            self.placeholder = self.getTranslation(key)
         }
     }
 }

@@ -12,7 +12,7 @@ extension UIViewController: BackgroundCapable {
         }
     }
     
-    @objc public var registerBackgroundTask: Bool {
+    @objc open var registerBackgroundTask: Bool {
         return false
     }
 }
@@ -33,7 +33,7 @@ public extension UIViewController {
         return UIViewController.getClassName(for: self)
     }
     
-    func getTranslation(_ key: String, values: [Any] = [], controller: Any? = nil) -> String {
+    public func getTranslation(_ key: String, values: [Any] = [], controller: Any? = nil) -> String {
         return UIViewController.getTranslation(key, values: values, controller: controller ?? self)
     }
     

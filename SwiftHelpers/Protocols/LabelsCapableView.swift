@@ -45,4 +45,25 @@ public extension LabelsCapableView {
         
         NSLayoutConstraint.activate(constraints)
     }
+    
+    static func calculateColumnsWidth(columnCount: Int, cellSpacing: UIEdgeInsets, columnsPriority: [CGFloat] = []) -> [CGFloat] {
+        let spacing = cellSpacing.left + cellSpacing.right
+        let availableWidth = UIScreen.main.bounds.width - (spacing * CGFloat(columnCount + 1))
+        let defaultColumnPriority = CGFloat(1) / CGFloat(columnCount)
+        
+        // normalize priorities
+        var normalizedPriorities: [CGFloat] = []
+        var totalPriorities: CGFloat = 0
+        for i in 0..<columnCount {
+            var priority = columnsPriority[safe: i] ?? defaultColumnPriority
+            totalPriorities += priority
+            if totalPriorities > 1 {
+                totalPriorities = 1
+                priority = 0
+            }
+            normalizedPriorities.append(priority)
+        }
+        
+        return normalizedPriorities.map { availableWidth * $0 }
+    }
 }

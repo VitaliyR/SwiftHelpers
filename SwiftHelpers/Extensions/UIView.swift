@@ -1,6 +1,10 @@
 import UIKit
 
+fileprivate typealias `Self` = UIView
+
 public extension UIView {
+    public static var defaultBorderColor: UIColor = .black
+    
     @IBInspectable var cornerRadius: CGFloat {
         set { layer.cornerRadius = newValue  }
         get { return layer.cornerRadius }
@@ -61,13 +65,13 @@ public extension UIView {
         return "border\(directionName)"
     }
     
-    func addBorder(_ direction: BorderDirection = .all, color: UIColor = .black, height: CGFloat = 1) {
+    func addBorder(_ direction: BorderDirection = .all, color: UIColor? = nil, height: CGFloat = 1) {
         let layerName = getBorderLayerName(for: direction)
         let newBorder = layer.sublayers?.filter { $0.name == layerName }.first ?? CALayer()
         let posY = direction == .top ? 0 : (frame.height - height)
         
         newBorder.frame = CGRect(x: 0, y: posY, width: frame.size.width, height: height)
-        newBorder.backgroundColor = color.cgColor
+        newBorder.backgroundColor = color?.cgColor ?? Self.defaultBorderColor.cgColor
         newBorder.name = layerName
         
         layer.addSublayer(newBorder)
@@ -88,16 +92,29 @@ public extension UIView {
         borderLayer?.removeFromSuperlayer()
     }
     
+    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
+    }
+    
     func doLayout(_ animated: Bool = false, completion: (() -> Void)? = nil) {
         if !animated {
             layoutIfNeeded()
             completion?()
-        } else if UIView.areAnimationsEnabled {
-            UIView.animate(withDuration: 0.2, animations: {
+        } else if Self.areAnimationsEnabled {
+            Self.animate(withDuration: 0.2, animations: {
                 self.layoutIfNeeded()
             }) { (a) in
                 completion?()
             }
         }
+    }
+    
+    class func empty() -> UIView {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
+        view.backgroundColor = .clear
+        return view
     }
 }
