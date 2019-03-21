@@ -40,7 +40,4 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit', 'CoreData', 'CoreLocation'
-  s.dependency 'Alamofire', '~> 4.8.1'
-  s.dependency 'AlamofireImage', '~> 3.5.0'
-  s.dependency 'SwiftyJSON', '~> 4.2.0'
 end
