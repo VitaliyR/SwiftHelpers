@@ -30,5 +30,13 @@ TODO: Add long description of the pod here.
   s.swift_version    = '5.0'
 
   s.ios.deployment_target = '10.0'
-  s.source_files = 'SwiftHelpers/**/*'
+  
+  s.source_files = 'SwiftHelpers/Base/**/*'
+  
+  s.subspec 'iOS' do |ss|
+      ss.source_files = 'SwiftHelpers/{Base,iOS}/**/*'
+      ss.ios.frameworks = 'UIKit', 'CoreData', 'CoreLocation'
+  end
+  
+  s.default_subspecs = 'iOS'
 end

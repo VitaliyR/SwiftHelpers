@@ -18,6 +18,23 @@
 		EC4EC791222EF32E003A9B08 /* ObjectAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC790222EF32E003A9B08 /* ObjectAssociation.swift */; };
 		EC4EC79A222EF571003A9B08 /* CommonHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC799222EF571003A9B08 /* CommonHelpers.swift */; };
 		EC631A30223A7E2C00425A8C /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC631A2F223A7E2C00425A8C /* Int.swift */; };
+		EC6C453A224E0AA400E1110B /* BackgroundCapable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6C4539224E0AA400E1110B /* BackgroundCapable.swift */; };
+		EC6C453C224E0AAF00E1110B /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6C453B224E0AAF00E1110B /* Localizable.swift */; };
+		EC6C453E224E0ABA00E1110B /* LabelsCapableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6C453D224E0ABA00E1110B /* LabelsCapableView.swift */; };
+		EC6C454B224E0B5700E1110B /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6C4540224E0B5700E1110B /* NSMutableAttributedString.swift */; };
+		EC6C454C224E0B5700E1110B /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6C4541224E0B5700E1110B /* UITextField.swift */; };
+		EC6C454D224E0B5700E1110B /* CGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6C4542224E0B5700E1110B /* CGColor.swift */; };
+		EC6C454E224E0B5700E1110B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6C4543224E0B5700E1110B /* UIView.swift */; };
+		EC6C454F224E0B5700E1110B /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6C4544224E0B5700E1110B /* UIViewController.swift */; };
+		EC6C4550224E0B5700E1110B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6C4545224E0B5700E1110B /* UIColor.swift */; };
+		EC6C4551224E0B5700E1110B /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6C4546224E0B5700E1110B /* UIButton.swift */; };
+		EC6C4552224E0B5700E1110B /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6C4547224E0B5700E1110B /* UIImage.swift */; };
+		EC6C4553224E0B5700E1110B /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6C4548224E0B5700E1110B /* UICollectionView.swift */; };
+		EC6C4554224E0B5700E1110B /* UIString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6C4549224E0B5700E1110B /* UIString.swift */; };
+		EC6C4555224E0B5700E1110B /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6C454A224E0B5700E1110B /* UITableView.swift */; };
+		EC6C4559224E0BA100E1110B /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6C4558224E0BA100E1110B /* XibView.swift */; };
+		EC6C455B224E0BB200E1110B /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6C455A224E0BB200E1110B /* KeyboardViewController.swift */; };
+		EC6C455D224E0BC400E1110B /* UICommonHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6C455C224E0BC400E1110B /* UICommonHelpers.swift */; };
 		EC9D65B72236EA6000A66D8A /* PropertyReflectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D65B62236EA6000A66D8A /* PropertyReflectable.swift */; };
 		ECB9A5AB2241A3640060168B /* JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB9A5AA2241A3640060168B /* JSONDecoder.swift */; };
 		ECB9A5AD2241A3760060168B /* JSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB9A5AC2241A3760060168B /* JSONEncoder.swift */; };
@@ -43,6 +60,23 @@
 		EC4EC790222EF32E003A9B08 /* ObjectAssociation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectAssociation.swift; sourceTree = "<group>"; };
 		EC4EC799222EF571003A9B08 /* CommonHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonHelpers.swift; sourceTree = "<group>"; };
 		EC631A2F223A7E2C00425A8C /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		EC6C4539224E0AA400E1110B /* BackgroundCapable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundCapable.swift; sourceTree = "<group>"; };
+		EC6C453B224E0AAF00E1110B /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		EC6C453D224E0ABA00E1110B /* LabelsCapableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelsCapableView.swift; sourceTree = "<group>"; };
+		EC6C4540224E0B5700E1110B /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
+		EC6C4541224E0B5700E1110B /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		EC6C4542224E0B5700E1110B /* CGColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGColor.swift; sourceTree = "<group>"; };
+		EC6C4543224E0B5700E1110B /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		EC6C4544224E0B5700E1110B /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		EC6C4545224E0B5700E1110B /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		EC6C4546224E0B5700E1110B /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		EC6C4547224E0B5700E1110B /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		EC6C4548224E0B5700E1110B /* UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		EC6C4549224E0B5700E1110B /* UIString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIString.swift; sourceTree = "<group>"; };
+		EC6C454A224E0B5700E1110B /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		EC6C4558224E0BA100E1110B /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
+		EC6C455A224E0BB200E1110B /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		EC6C455C224E0BC400E1110B /* UICommonHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICommonHelpers.swift; sourceTree = "<group>"; };
 		EC9D65B62236EA6000A66D8A /* PropertyReflectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyReflectable.swift; sourceTree = "<group>"; };
 		ECB9A5AA2241A3640060168B /* JSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoder.swift; sourceTree = "<group>"; };
 		ECB9A5AC2241A3760060168B /* JSONEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONEncoder.swift; sourceTree = "<group>"; };
@@ -128,9 +162,8 @@
 		EC4EC764222EEE42003A9B08 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				EC4EC78B222EF2AE003A9B08 /* Protocols */,
-				EC4EC76A222EEEF9003A9B08 /* Extensions */,
-				EC4EC767222EEE9C003A9B08 /* Components */,
+				EC7134FB224E0DBD0074D22D /* Base */,
+				EC6C4537224E0A8300E1110B /* iOS */,
 			);
 			name = Source;
 			path = ../SwiftHelpers;
@@ -168,6 +201,64 @@
 				EC9D65B62236EA6000A66D8A /* PropertyReflectable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		EC6C4537224E0A8300E1110B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EC6C4538224E0A9400E1110B /* Protocols */,
+				EC6C453F224E0B2E00E1110B /* Extensions */,
+				EC6C4557224E0B8200E1110B /* Components */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		EC6C4538224E0A9400E1110B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EC6C4539224E0AA400E1110B /* BackgroundCapable.swift */,
+				EC6C453B224E0AAF00E1110B /* Localizable.swift */,
+				EC6C453D224E0ABA00E1110B /* LabelsCapableView.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		EC6C453F224E0B2E00E1110B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EC6C4542224E0B5700E1110B /* CGColor.swift */,
+				EC6C4540224E0B5700E1110B /* NSMutableAttributedString.swift */,
+				EC6C4549224E0B5700E1110B /* UIString.swift */,
+				EC6C4546224E0B5700E1110B /* UIButton.swift */,
+				EC6C4548224E0B5700E1110B /* UICollectionView.swift */,
+				EC6C4545224E0B5700E1110B /* UIColor.swift */,
+				EC6C4547224E0B5700E1110B /* UIImage.swift */,
+				EC6C454A224E0B5700E1110B /* UITableView.swift */,
+				EC6C4541224E0B5700E1110B /* UITextField.swift */,
+				EC6C4543224E0B5700E1110B /* UIView.swift */,
+				EC6C4544224E0B5700E1110B /* UIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EC6C4557224E0B8200E1110B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EC6C455C224E0BC400E1110B /* UICommonHelpers.swift */,
+				EC6C4558224E0BA100E1110B /* XibView.swift */,
+				EC6C455A224E0BB200E1110B /* KeyboardViewController.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		EC7134FB224E0DBD0074D22D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EC4EC78B222EF2AE003A9B08 /* Protocols */,
+				EC4EC76A222EEEF9003A9B08 /* Extensions */,
+				EC4EC767222EEE9C003A9B08 /* Components */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,19 +386,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC4EC77E222EF1F5003A9B08 /* String.swift in Sources */,
+				EC6C455B224E0BB200E1110B /* KeyboardViewController.swift in Sources */,
+				EC6C4552224E0B5700E1110B /* UIImage.swift in Sources */,
 				EC4EC791222EF32E003A9B08 /* ObjectAssociation.swift in Sources */,
+				EC6C4559224E0BA100E1110B /* XibView.swift in Sources */,
+				EC6C4554224E0B5700E1110B /* UIString.swift in Sources */,
 				EC4EC772222EEF42003A9B08 /* Date.swift in Sources */,
 				EC4EC770222EEF31003A9B08 /* Collection.swift in Sources */,
 				ECB9A5AB2241A3640060168B /* JSONDecoder.swift in Sources */,
+				EC6C4553224E0B5700E1110B /* UICollectionView.swift in Sources */,
 				EC4EC774222EEF4F003A9B08 /* Formatter.swift in Sources */,
+				EC6C453A224E0AA400E1110B /* BackgroundCapable.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				EC6C454B224E0B5700E1110B /* NSMutableAttributedString.swift in Sources */,
 				EC4EC77C222EF1CE003A9B08 /* NSObject.swift in Sources */,
+				EC6C4555224E0B5700E1110B /* UITableView.swift in Sources */,
+				EC6C4550224E0B5700E1110B /* UIColor.swift in Sources */,
+				EC6C4551224E0B5700E1110B /* UIButton.swift in Sources */,
+				EC6C454E224E0B5700E1110B /* UIView.swift in Sources */,
+				EC6C454C224E0B5700E1110B /* UITextField.swift in Sources */,
 				EC9D65B72236EA6000A66D8A /* PropertyReflectable.swift in Sources */,
 				EC4EC778222EEF76003A9B08 /* NSManagedObjectContext.swift in Sources */,
+				EC6C454F224E0B5700E1110B /* UIViewController.swift in Sources */,
 				EC631A30223A7E2C00425A8C /* Int.swift in Sources */,
 				ECC53500223853B20056908A /* Encodable.swift in Sources */,
 				EC4EC79A222EF571003A9B08 /* CommonHelpers.swift in Sources */,
+				EC6C453C224E0AAF00E1110B /* Localizable.swift in Sources */,
+				EC6C454D224E0B5700E1110B /* CGColor.swift in Sources */,
 				ECB9A5AD2241A3760060168B /* JSONEncoder.swift in Sources */,
+				EC6C453E224E0ABA00E1110B /* LabelsCapableView.swift in Sources */,
+				EC6C455D224E0BC400E1110B /* UICommonHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,7 +539,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -449,7 +557,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

@@ -1,7 +1,9 @@
 PODS:
   - Nimble (7.3.4)
   - Quick (1.3.4)
-  - SwiftHelpers (0.1.0)
+  - SwiftHelpers (0.1.0):
+    - SwiftHelpers/iOS (= 0.1.0)
+  - SwiftHelpers/iOS (0.1.0)
 
 DEPENDENCIES:
   - Nimble (~> 7.3.1)
@@ -20,8 +22,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
   Quick: f4f7f063c524394c73ed93ac70983c609805d481
-  SwiftHelpers: 895d10b6e36441493ebfbdfa5d1e8df4672fbb8f
+  SwiftHelpers: 7b4e6ba2440b2c1418c9ccffca97b5237c32ebfb
 
-PODFILE CHECKSUM: f9812b916b2d3b82c839fe0c61c21987ed6398c4
+PODFILE CHECKSUM: a87c9d5c3f15f6ae3958b204e4c2758f9a990284
 
 COCOAPODS: 1.6.1
