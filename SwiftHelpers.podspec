@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftHelpers'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Very personal helpers for Swift'
 
 # This description is used to generate tags and improve search results.
@@ -30,12 +30,17 @@ TODO: Add long description of the pod here.
   s.swift_version    = '5.0'
 
   s.ios.deployment_target = '10.0'
+  s.osx.deployment_target = '10.12'
   
   s.source_files = 'SwiftHelpers/Base/**/*'
   
   s.subspec 'iOS' do |ss|
       ss.source_files = 'SwiftHelpers/{Base,iOS}/**/*'
       ss.ios.frameworks = 'UIKit', 'CoreData', 'CoreLocation'
+  end
+  
+  s.subspec 'OSX' do |ss|
+      ss.source_files = 'SwiftHelpers/{Base}/**/*'
   end
   
   s.default_subspecs = 'iOS'

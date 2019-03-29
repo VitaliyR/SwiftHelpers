@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 
 public extension Formatter {
     static let iso8601: ISO8601DateFormatter = {
