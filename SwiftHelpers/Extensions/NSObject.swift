@@ -1,7 +1,5 @@
 import Foundation
 
-fileprivate typealias `Self` = NSObject
-
 public extension NSObject {
     class func getClassName(for object: Any) -> String {
         return String(describing: type(of: object))
@@ -16,10 +14,10 @@ public extension NSObject {
     }
     
     func getClassName() -> String {
-        return Self.getClassName(for: self)
+        return NSObject.getClassName(for: self)
     }
     
     func getClassNameUnderscored() -> String {
-        return Self.getClassNameUnderscored(for: self)
+        return NSObject.getClassNameUnderscored(for: self)
     }
 }

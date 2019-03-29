@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SwiftHelpers'
   s.version          = '0.1.0'
-  s.summary          = 'Very personal helpers'
+  s.summary          = 'Very personal helpers for Swift'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -27,17 +27,8 @@ TODO: Add long description of the pod here.
   s.author           = { 'vitaliyr' => 'vit@ribachenko.com' }
   s.source           = { :git => 'https://github.com/vitaliyr/SwiftHelpers.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/sa1en'
-  s.swift_version = '4.0'
+  s.swift_version    = '5.0'
 
-  #  s.ios.framework = 'UIKit'
   s.ios.deployment_target = '10.0'
-
   s.source_files = 'SwiftHelpers/**/*'
-  
-  # s.resource_bundles = {
-  #   'SwiftHelpers' => ['SwiftHelpers/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'UIKit', 'CoreData', 'CoreLocation'
 end
