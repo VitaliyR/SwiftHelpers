@@ -153,14 +153,24 @@ public extension CommonHelpers {
     }
     
     enum Side {
-        case top, bottom
+        case top, bottom, left, right
     }
     static func safeAreaHeight(_ side: Side, for controller: UIViewController) -> CGFloat {
-        var margin = side == .top ? controller.topLayoutGuide.length : controller.bottomLayoutGuide.length
         if #available(iOS 11.0, *) {
-            margin = side == .top ? controller.view.safeAreaInsets.top : controller.view.safeAreaInsets.bottom
+            switch side {
+            case .top: return controller.view.safeAreaInsets.top
+            case .bottom: return controller.view.safeAreaInsets.bottom
+            case .left: return controller.view.safeAreaInsets.left
+            case .right: return controller.view.safeAreaInsets.right
+            }
+        } else {
+            switch side {
+            case .top: return controller.topLayoutGuide.length
+            case .bottom: return controller.bottomLayoutGuide.length
+            case .left: return 0
+            case .right: return 0
+            }
         }
-        return margin
     }
     
     static func checkTableView(_ tableView: UITableView, newIndex: Int?, oldIndex: Int?) {

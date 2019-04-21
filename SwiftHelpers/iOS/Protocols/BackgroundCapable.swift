@@ -45,7 +45,4 @@ public extension BackgroundCapable {
             cancelBackgroundTask()
         }
     }
-    
-    func didBackground() {}
-    func didBecomeActive() {}
 }

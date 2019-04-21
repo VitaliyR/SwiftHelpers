@@ -15,11 +15,6 @@ import UIKit
         commonInit()
     }
     
-    override open func awakeFromNib() {
-        super.awakeFromNib()
-        commonInit()
-    }
-    
     open func commonInit() {
         nibName = nibName ?? type(of: self).description().components(separatedBy: ".").last!
         xibSetup()

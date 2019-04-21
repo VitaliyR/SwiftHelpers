@@ -1,10 +1,10 @@
 import UIKit
 
 open class KeyboardViewController: UIViewController {
-    @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet open var scrollView: UIScrollView!
     @IBOutlet var contentViewHeightConstraint: NSLayoutConstraint!
     
-    private var keyboardSize: CGFloat = 0 {
+    open private(set) var keyboardSize: CGFloat = 0 {
         didSet {
             self.reposition()
             UIView.animate(withDuration: 0.3) {
@@ -15,7 +15,7 @@ open class KeyboardViewController: UIViewController {
     
     override open func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
@@ -44,13 +44,19 @@ open class KeyboardViewController: UIViewController {
         
         if view.frame.height > viewportWithoutKeyboard {
             contentViewHeightConstraint.constant = -1 * (UIScreen.main.bounds.height - view.frame.height)
-            inset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize, right: 0)
+            let bottomInset = keyboardSize > 0 ? keyboardSize - CommonHelpers.safeAreaHeight(.bottom, for: self) : keyboardSize
+            inset = UIEdgeInsets(top: 0, left: 0, bottom: bottomInset, right: 0)
         } else {
-            contentViewHeightConstraint.constant = -1 * keyboardSize
+            let bottomSize = keyboardSize > 0 ? keyboardSize : CommonHelpers.safeAreaHeight(.bottom, for: self)
+            contentViewHeightConstraint.constant = -1 * bottomSize
             inset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         }
         
         scrollView.contentInset = inset
-        scrollView.scrollIndicatorInsets = inset
+        scrollView.scrollIndicatorInsets = getScrollIndicatorInsets(for: inset)
+    }
+    
+    open func getScrollIndicatorInsets(for contentInset: UIEdgeInsets) -> UIEdgeInsets {
+        return contentInset
     }
 }

@@ -15,6 +15,9 @@ extension UIViewController: BackgroundCapable {
     @objc open var registerBackgroundTask: Bool {
         return false
     }
+    
+    @objc open func didBecomeActive() {}
+    @objc open func didBackground() {}
 }
 
 public extension UIViewController {
@@ -31,22 +34,5 @@ public extension UIViewController {
     
     var controllerName: String {
         return UIViewController.getClassName(for: self)
-    }
-    
-    func getTranslation(_ key: String, values: [Any] = [], controller: Any? = nil) -> String {
-        return UIViewController.getTranslation(key, values: values, controller: controller ?? self)
-    }
-    
-    class func getTranslation(_ key: String, values: [Any] = [], controller: Any? = nil) -> String {
-        var translationKey: String
-        
-        if let controllerName = controller as? String {
-            translationKey = controllerName
-        } else {
-            translationKey = getClassNameUnderscored(for: controller ?? self)
-        }
-        
-        let translation = "\(translationKey)_\(key.uppercased())".localized
-        return values.count > 0 ? String(format: translation, arguments: values.map { "\($0)" }) : translation
     }
 }

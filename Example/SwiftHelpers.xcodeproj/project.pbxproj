@@ -39,6 +39,7 @@
 		ECB9A5AB2241A3640060168B /* JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB9A5AA2241A3640060168B /* JSONDecoder.swift */; };
 		ECB9A5AD2241A3760060168B /* JSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB9A5AC2241A3760060168B /* JSONEncoder.swift */; };
 		ECC53500223853B20056908A /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC534FF223853B20056908A /* Encodable.swift */; };
+		ECF044C0224E574200C7D58B /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF044BF224E574200C7D58B /* Array.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,7 @@
 		ECB9A5AA2241A3640060168B /* JSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoder.swift; sourceTree = "<group>"; };
 		ECB9A5AC2241A3760060168B /* JSONEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONEncoder.swift; sourceTree = "<group>"; };
 		ECC534FF223853B20056908A /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		ECF044BF224E574200C7D58B /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				EC4EC76F222EEF31003A9B08 /* Collection.swift */,
+				ECF044BF224E574200C7D58B /* Array.swift */,
 				EC4EC771222EEF42003A9B08 /* Date.swift */,
 				EC4EC773222EEF4F003A9B08 /* Formatter.swift */,
 				EC4EC777222EEF76003A9B08 /* NSManagedObjectContext.swift */,
@@ -390,6 +393,7 @@
 				EC6C4552224E0B5700E1110B /* UIImage.swift in Sources */,
 				EC4EC791222EF32E003A9B08 /* ObjectAssociation.swift in Sources */,
 				EC6C4559224E0BA100E1110B /* XibView.swift in Sources */,
+				ECF044C0224E574200C7D58B /* Array.swift in Sources */,
 				EC6C4554224E0B5700E1110B /* UIString.swift in Sources */,
 				EC4EC772222EEF42003A9B08 /* Date.swift in Sources */,
 				EC4EC770222EEF31003A9B08 /* Collection.swift in Sources */,
