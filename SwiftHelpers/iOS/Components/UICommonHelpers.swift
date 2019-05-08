@@ -202,6 +202,6 @@ public extension CommonHelpers {
             view.bottomAnchor.constraint(equalTo: parent.bottomAnchor),
             view.leadingAnchor.constraint(equalTo: parent.leadingAnchor),
             view.trailingAnchor.constraint(equalTo: parent.trailingAnchor)
-            ])
+        ])
     }
 }
