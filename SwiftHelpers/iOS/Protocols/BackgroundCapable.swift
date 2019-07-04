@@ -7,6 +7,9 @@ public protocol BackgroundCapable: class {
     func didBecomeActive()
 }
 
+fileprivate var DidEnterBackground = "didEnterBackgroundNotification"
+fileprivate var DidBecomeActive = "didBecomeActiveNotification"
+
 public extension BackgroundCapable {
     func cancelBackgroundTask() {
         DispatchQueue.main.async {
@@ -32,16 +35,26 @@ public extension BackgroundCapable {
     
     func toggleBackgroundStateObservers(state: Bool) {
         if state {
-            NotificationCenter.default.addObserver(forName: UIApplication.didEnterBackgroundNotification, object: nil, queue: nil) { [weak self] (notification) in
+            let didEnterBackgroundNotif = NotificationCenter.default.addObserver(forName: UIApplication.didEnterBackgroundNotification, object: nil, queue: nil) { [weak self] (notification) in
                 if self == nil { return }
                 self!.willBackground(notification)
             }
-            NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: nil) { [weak self] (notification) in
+            let didBecomeActiveNotif = NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: nil) { [weak self] (notification) in
                 if self == nil { return }
                 self!.becomeActive(notification)
             }
+            
+            objc_setAssociatedObject(self, &DidEnterBackground, didEnterBackgroundNotif, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &DidBecomeActive, didBecomeActiveNotif, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            
         } else {
-            NotificationCenter.default.removeObserver(self)
+            if let didEnterBackgroundNotif = objc_getAssociatedObject(self, &DidEnterBackground) {
+                NotificationCenter.default.removeObserver(didEnterBackgroundNotif)
+            }
+            if let didBecomeActiveNotif = objc_getAssociatedObject(self, &DidBecomeActive) {
+                NotificationCenter.default.removeObserver(didBecomeActiveNotif)
+            }
+            
             cancelBackgroundTask()
         }
     }
