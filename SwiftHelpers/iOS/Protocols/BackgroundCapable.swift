@@ -7,8 +7,8 @@ public protocol BackgroundCapable: class {
     func didBecomeActive()
 }
 
-fileprivate let DidEnterBackground = "didEnterBackgroundNotification"
-fileprivate let DidBecomeActive = "didBecomeActiveNotification"
+fileprivate var DidEnterBackground = "didEnterBackgroundNotification"
+fileprivate var DidBecomeActive = "didBecomeActiveNotification"
 
 public extension BackgroundCapable {
     func cancelBackgroundTask() {
