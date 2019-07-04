@@ -7,10 +7,8 @@ public protocol BackgroundCapable: class {
     func didBecomeActive()
 }
 
-fileprivate struct AssociatedKeys {
-    static var DidEnterBackground = "didEnterBackground"
-    static var DidBecomeActive = "didBecomeActive"
-}
+fileprivate let DidEnterBackground = "didEnterBackgroundNotification"
+fileprivate let DidBecomeActive = "didBecomeActiveNotification"
 
 public extension BackgroundCapable {
     func cancelBackgroundTask() {
@@ -46,14 +44,14 @@ public extension BackgroundCapable {
                 self!.becomeActive(notification)
             }
             
-            objc_setAssociatedObject(self, &AssociatedKeys.DidEnterBackground, didEnterBackgroundNotif, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            objc_setAssociatedObject(self, &AssociatedKeys.DidBecomeActive, didBecomeActiveNotif, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &DidEnterBackground, didEnterBackgroundNotif, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &DidBecomeActive, didBecomeActiveNotif, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             
         } else {
-            if let didEnterBackgroundNotif = objc_getAssociatedObject(self, &AssociatedKeys.DidEnterBackground) {
+            if let didEnterBackgroundNotif = objc_getAssociatedObject(self, &DidEnterBackground) {
                 NotificationCenter.default.removeObserver(didEnterBackgroundNotif)
             }
-            if let didBecomeActiveNotif = objc_getAssociatedObject(self, &AssociatedKeys.DidBecomeActive) {
+            if let didBecomeActiveNotif = objc_getAssociatedObject(self, &DidBecomeActive) {
                 NotificationCenter.default.removeObserver(didBecomeActiveNotif)
             }
             
