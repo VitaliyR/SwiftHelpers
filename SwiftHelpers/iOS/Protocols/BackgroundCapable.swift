@@ -7,6 +7,11 @@ public protocol BackgroundCapable: class {
     func didBecomeActive()
 }
 
+fileprivate struct AssociatedKeys {
+    static var DidEnterBackground = "didEnterBackground"
+    static var DidBecomeActive = "didBecomeActive"
+}
+
 public extension BackgroundCapable {
     func cancelBackgroundTask() {
         DispatchQueue.main.async {
@@ -32,16 +37,26 @@ public extension BackgroundCapable {
     
     func toggleBackgroundStateObservers(state: Bool) {
         if state {
-            NotificationCenter.default.addObserver(forName: UIApplication.didEnterBackgroundNotification, object: nil, queue: nil) { [weak self] (notification) in
+            let didEnterBackgroundNotif = NotificationCenter.default.addObserver(forName: UIApplication.didEnterBackgroundNotification, object: nil, queue: nil) { [weak self] (notification) in
                 if self == nil { return }
                 self!.willBackground(notification)
             }
-            NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: nil) { [weak self] (notification) in
+            let didBecomeActiveNotif = NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: nil) { [weak self] (notification) in
                 if self == nil { return }
                 self!.becomeActive(notification)
             }
+            
+            objc_setAssociatedObject(self, &AssociatedKeys.DidEnterBackground, didEnterBackgroundNotif, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &AssociatedKeys.DidBecomeActive, didBecomeActiveNotif, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            
         } else {
-            NotificationCenter.default.removeObserver(self)
+            if let didEnterBackgroundNotif = objc_getAssociatedObject(self, &AssociatedKeys.DidEnterBackground) {
+                NotificationCenter.default.removeObserver(didEnterBackgroundNotif)
+            }
+            if let didBecomeActiveNotif = objc_getAssociatedObject(self, &AssociatedKeys.DidBecomeActive) {
+                NotificationCenter.default.removeObserver(didBecomeActiveNotif)
+            }
+            
             cancelBackgroundTask()
         }
     }
