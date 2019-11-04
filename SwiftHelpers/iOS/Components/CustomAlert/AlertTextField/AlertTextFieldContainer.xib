@@ -8,19 +8,20 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertTextFieldContainer" customModule="sprutdriver" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertTextFieldContainer" customModule="SwiftHelpers_Tests" customModuleProvider="target">
             <connections>
                 <outlet property="containerView" destination="iN0-l3-epB" id="4Rk-h0-C1y"/>
-                <outlet property="textField" destination="1fb-5I-Mu3" id="lSI-a4-O2R"/>
+                <outlet property="textField" destination="hr4-0Y-PPu" id="QPc-c1-43e"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="413" height="101"/>
+            <rect key="frame" x="0.0" y="0.0" width="292" height="88"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1fb-5I-Mu3" customClass="AlertTextField" customModule="sprutdriver" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="413" height="101"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hr4-0Y-PPu" customClass="AlertTextField" customModule="SwiftHelpers_Tests" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="292" height="88"/>
+                    <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                     <userDefinedRuntimeAttributes>
@@ -38,16 +39,16 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="1fb-5I-Mu3" secondAttribute="bottom" id="6vi-Ir-Dqt"/>
-                <constraint firstAttribute="trailing" secondItem="1fb-5I-Mu3" secondAttribute="trailing" id="96Z-qF-ETo"/>
-                <constraint firstItem="1fb-5I-Mu3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="W4y-xR-KMk"/>
-                <constraint firstItem="1fb-5I-Mu3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="w0d-0q-omT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="hr4-0Y-PPu" secondAttribute="bottom" id="Gw9-Zg-sfi"/>
+                <constraint firstItem="hr4-0Y-PPu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="QMu-Yo-ITa"/>
+                <constraint firstItem="hr4-0Y-PPu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="aOL-ML-aQR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hr4-0Y-PPu" secondAttribute="trailing" id="f6s-p6-aHh"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="136.95652173913044" y="-170.42410714285714"/>
+            <point key="canvasLocation" x="224.63768115942031" y="-174.77678571428569"/>
         </view>
     </objects>
 </document>

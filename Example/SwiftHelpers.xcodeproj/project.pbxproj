@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C2F3D4923704F6A00E4D592 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2F3D4823704F6A00E4D592 /* Colors.swift */; };
+		2C2F3D4B2370511F00E4D592 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2F3D4A2370511F00E4D592 /* AlertView.swift */; };
 		2CD8A134236FABD200A8E8A2 /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD8A125236FABD200A8E8A2 /* SeparatorView.swift */; };
 		2CD8A135236FABD200A8E8A2 /* SeparatorContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8A126236FABD200A8E8A2 /* SeparatorContainer.xib */; };
-		2CD8A137236FABD200A8E8A2 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD8A129236FABD200A8E8A2 /* AlertView.swift */; };
 		2CD8A138236FABD200A8E8A2 /* AlertTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD8A12B236FABD200A8E8A2 /* AlertTextField.swift */; };
 		2CD8A139236FABD200A8E8A2 /* AlertTextFieldContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8A12C236FABD200A8E8A2 /* AlertTextFieldContainer.xib */; };
 		2CD8A13A236FABD200A8E8A2 /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD8A12E236FABD200A8E8A2 /* AlertAction.swift */; };
@@ -55,10 +56,11 @@
 
 /* Begin PBXFileReference section */
 		173CCB5F53A5E22C3CBAFF95 /* Pods_SwiftHelpers_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftHelpers_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C2F3D4823704F6A00E4D592 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		2C2F3D4A2370511F00E4D592 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		2CD8A125236FABD200A8E8A2 /* SeparatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
 		2CD8A126236FABD200A8E8A2 /* SeparatorContainer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SeparatorContainer.xib; sourceTree = "<group>"; };
 		2CD8A127236FABD200A8E8A2 /* CustomAlert.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CustomAlert.storyboard; sourceTree = "<group>"; };
-		2CD8A129236FABD200A8E8A2 /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		2CD8A12B236FABD200A8E8A2 /* AlertTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertTextField.swift; sourceTree = "<group>"; };
 		2CD8A12C236FABD200A8E8A2 /* AlertTextFieldContainer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertTextFieldContainer.xib; sourceTree = "<group>"; };
 		2CD8A12E236FABD200A8E8A2 /* AlertAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				2CD8A131236FABD200A8E8A2 /* AnimationControllers */,
 				2CD8A127236FABD200A8E8A2 /* CustomAlert.storyboard */,
 				2CD8A133236FABD200A8E8A2 /* CustomAlertController.swift */,
+				2C2F3D4823704F6A00E4D592 /* Colors.swift */,
 			);
 			path = CustomAlert;
 			sourceTree = "<group>";
@@ -145,7 +148,7 @@
 		2CD8A128236FABD200A8E8A2 /* AlertView */ = {
 			isa = PBXGroup;
 			children = (
-				2CD8A129236FABD200A8E8A2 /* AlertView.swift */,
+				2C2F3D4A2370511F00E4D592 /* AlertView.swift */,
 			);
 			path = AlertView;
 			sourceTree = "<group>";
@@ -470,9 +473,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CD8A134236FABD200A8E8A2 /* SeparatorView.swift in Sources */,
+				2C2F3D4923704F6A00E4D592 /* Colors.swift in Sources */,
 				EC4EC77E222EF1F5003A9B08 /* String.swift in Sources */,
 				EC6C455B224E0BB200E1110B /* KeyboardViewController.swift in Sources */,
 				2CD8A13E236FABD200A8E8A2 /* CustomAlertController.swift in Sources */,
+				2C2F3D4B2370511F00E4D592 /* AlertView.swift in Sources */,
 				EC6C4552224E0B5700E1110B /* UIImage.swift in Sources */,
 				EC4EC791222EF32E003A9B08 /* ObjectAssociation.swift in Sources */,
 				EC6C4559224E0BA100E1110B /* XibView.swift in Sources */,
@@ -507,7 +512,6 @@
 				2CD8A13C236FABD200A8E8A2 /* ActionButton.swift in Sources */,
 				EC6C453E224E0ABA00E1110B /* LabelsCapableView.swift in Sources */,
 				EC6C455D224E0BC400E1110B /* UICommonHelpers.swift in Sources */,
-				2CD8A137236FABD200A8E8A2 /* AlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

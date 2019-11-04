@@ -124,7 +124,7 @@
                                                     </constraints>
                                                 </view>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <blurEffect style="light"/>
+                                                <blurEffect style="regular"/>
                                             </visualEffectView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="0.40140845070422537" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

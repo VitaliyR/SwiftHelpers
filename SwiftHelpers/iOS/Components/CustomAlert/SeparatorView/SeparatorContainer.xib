@@ -17,7 +17,7 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="Container View" customClass="SeparatorView" customModule="SwiftHelpers_Tests" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="211" height="155"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="0.82352941180000006" green="0.82352941180000006" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

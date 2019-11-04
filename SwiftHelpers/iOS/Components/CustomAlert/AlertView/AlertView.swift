@@ -1,7 +1,21 @@
 import UIKit
 
-public class AlertView: UIView {}
+public class AlertView: UIView {
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+    }
+    
+    public required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        commonInit()
+    }
+    
+    private func commonInit() {
+        backgroundColor = Colors.foregroundColor
+    }
+}
 
 public class AlertBackgroundView: UIView {
-    public static var color = #colorLiteral(red: 0.09803921569, green: 0.09803921569, blue: 0.1098039216, alpha: 0.3)
+    public static var color = Colors.backgroundColor
 }

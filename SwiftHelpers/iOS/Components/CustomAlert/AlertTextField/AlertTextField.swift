@@ -1,7 +1,7 @@
 import UIKit
 
 public class AlertTextField: UITextField {
-    let padding = UIEdgeInsets(top: 9, left: 7, bottom: 9, right: 7)
+    let padding = UIEdgeInsets(top: 0, left: 7, bottom: 0, right: 7)
 
     override public func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
@@ -39,7 +39,10 @@ class AlertTextFieldContainer: UIView {
             containerView.topAnchor.constraint(equalTo: self.topAnchor),
             containerView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             containerView.leftAnchor.constraint(equalTo: self.leftAnchor),
-            containerView.rightAnchor.constraint(equalTo: self.rightAnchor)
+            containerView.rightAnchor.constraint(equalTo: self.rightAnchor),
+            containerView.heightAnchor.constraint(equalToConstant: 36)
         ])
+        
+        textField.borderColor = Colors.textFieldBorderColor
     }
 }

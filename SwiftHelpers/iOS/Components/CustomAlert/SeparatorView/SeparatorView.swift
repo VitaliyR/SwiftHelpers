@@ -26,5 +26,7 @@ public class SeparatorContainer: UIView {
             separatorView.leftAnchor.constraint(equalTo: self.leftAnchor),
             separatorView.rightAnchor.constraint(equalTo: self.rightAnchor)
         ])
+        
+        self.backgroundColor = Colors.separatorColor
     }
 }
