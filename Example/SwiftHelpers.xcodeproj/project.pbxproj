@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CD8A134236FABD200A8E8A2 /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD8A125236FABD200A8E8A2 /* SeparatorView.swift */; };
+		2CD8A135236FABD200A8E8A2 /* SeparatorContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8A126236FABD200A8E8A2 /* SeparatorContainer.xib */; };
+		2CD8A137236FABD200A8E8A2 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD8A129236FABD200A8E8A2 /* AlertView.swift */; };
+		2CD8A138236FABD200A8E8A2 /* AlertTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD8A12B236FABD200A8E8A2 /* AlertTextField.swift */; };
+		2CD8A139236FABD200A8E8A2 /* AlertTextFieldContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8A12C236FABD200A8E8A2 /* AlertTextFieldContainer.xib */; };
+		2CD8A13A236FABD200A8E8A2 /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD8A12E236FABD200A8E8A2 /* AlertAction.swift */; };
+		2CD8A13B236FABD200A8E8A2 /* ActionButtonContainer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8A12F236FABD200A8E8A2 /* ActionButtonContainer.xib */; };
+		2CD8A13C236FABD200A8E8A2 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD8A130236FABD200A8E8A2 /* ActionButton.swift */; };
+		2CD8A13D236FABD200A8E8A2 /* AlertAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD8A132236FABD200A8E8A2 /* AlertAnimationController.swift */; };
+		2CD8A13E236FABD200A8E8A2 /* CustomAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD8A133236FABD200A8E8A2 /* CustomAlertController.swift */; };
+		2CD8A13F236FB73400A8E8A2 /* CustomAlert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CD8A127236FABD200A8E8A2 /* CustomAlert.storyboard */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		72FB183539EE284BCE1F161B /* Pods_SwiftHelpers_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 173CCB5F53A5E22C3CBAFF95 /* Pods_SwiftHelpers_Tests.framework */; };
 		EC4EC770222EEF31003A9B08 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4EC76F222EEF31003A9B08 /* Collection.swift */; };
@@ -44,6 +55,17 @@
 
 /* Begin PBXFileReference section */
 		173CCB5F53A5E22C3CBAFF95 /* Pods_SwiftHelpers_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftHelpers_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CD8A125236FABD200A8E8A2 /* SeparatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
+		2CD8A126236FABD200A8E8A2 /* SeparatorContainer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SeparatorContainer.xib; sourceTree = "<group>"; };
+		2CD8A127236FABD200A8E8A2 /* CustomAlert.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CustomAlert.storyboard; sourceTree = "<group>"; };
+		2CD8A129236FABD200A8E8A2 /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		2CD8A12B236FABD200A8E8A2 /* AlertTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertTextField.swift; sourceTree = "<group>"; };
+		2CD8A12C236FABD200A8E8A2 /* AlertTextFieldContainer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertTextFieldContainer.xib; sourceTree = "<group>"; };
+		2CD8A12E236FABD200A8E8A2 /* AlertAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
+		2CD8A12F236FABD200A8E8A2 /* ActionButtonContainer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActionButtonContainer.xib; sourceTree = "<group>"; };
+		2CD8A130236FABD200A8E8A2 /* ActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		2CD8A132236FABD200A8E8A2 /* AlertAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertAnimationController.swift; sourceTree = "<group>"; };
+		2CD8A133236FABD200A8E8A2 /* CustomAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlertController.swift; sourceTree = "<group>"; };
 		30F964D3F0F17F2AA175E83A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		5ABB66DE09A90147C8A9D68D /* Pods-SwiftHelpers_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftHelpers_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftHelpers_Tests/Pods-SwiftHelpers_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E85F9A90E5D8C0E31CDBDEE /* Pods-SwiftHelpers_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftHelpers_Tests.release.xcconfig"; path = "Target Support Files/Pods-SwiftHelpers_Tests/Pods-SwiftHelpers_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +119,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CD8A123236FABD200A8E8A2 /* CustomAlert */ = {
+			isa = PBXGroup;
+			children = (
+				2CD8A124236FABD200A8E8A2 /* SeparatorView */,
+				2CD8A128236FABD200A8E8A2 /* AlertView */,
+				2CD8A12A236FABD200A8E8A2 /* AlertTextField */,
+				2CD8A12D236FABD200A8E8A2 /* AlertAction */,
+				2CD8A131236FABD200A8E8A2 /* AnimationControllers */,
+				2CD8A127236FABD200A8E8A2 /* CustomAlert.storyboard */,
+				2CD8A133236FABD200A8E8A2 /* CustomAlertController.swift */,
+			);
+			path = CustomAlert;
+			sourceTree = "<group>";
+		};
+		2CD8A124236FABD200A8E8A2 /* SeparatorView */ = {
+			isa = PBXGroup;
+			children = (
+				2CD8A125236FABD200A8E8A2 /* SeparatorView.swift */,
+				2CD8A126236FABD200A8E8A2 /* SeparatorContainer.xib */,
+			);
+			path = SeparatorView;
+			sourceTree = "<group>";
+		};
+		2CD8A128236FABD200A8E8A2 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				2CD8A129236FABD200A8E8A2 /* AlertView.swift */,
+			);
+			path = AlertView;
+			sourceTree = "<group>";
+		};
+		2CD8A12A236FABD200A8E8A2 /* AlertTextField */ = {
+			isa = PBXGroup;
+			children = (
+				2CD8A12B236FABD200A8E8A2 /* AlertTextField.swift */,
+				2CD8A12C236FABD200A8E8A2 /* AlertTextFieldContainer.xib */,
+			);
+			path = AlertTextField;
+			sourceTree = "<group>";
+		};
+		2CD8A12D236FABD200A8E8A2 /* AlertAction */ = {
+			isa = PBXGroup;
+			children = (
+				2CD8A12E236FABD200A8E8A2 /* AlertAction.swift */,
+				2CD8A12F236FABD200A8E8A2 /* ActionButtonContainer.xib */,
+				2CD8A130236FABD200A8E8A2 /* ActionButton.swift */,
+			);
+			path = AlertAction;
+			sourceTree = "<group>";
+		};
+		2CD8A131236FABD200A8E8A2 /* AnimationControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2CD8A132236FABD200A8E8A2 /* AlertAnimationController.swift */,
+			);
+			path = AnimationControllers;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +327,7 @@
 		EC6C4557224E0B8200E1110B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2CD8A123236FABD200A8E8A2 /* CustomAlert */,
 				EC6C455C224E0BC400E1110B /* UICommonHelpers.swift */,
 				EC6C4558224E0BA100E1110B /* XibView.swift */,
 				EC6C455A224E0BB200E1110B /* KeyboardViewController.swift */,
@@ -327,6 +408,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CD8A13F236FB73400A8E8A2 /* CustomAlert.storyboard in Resources */,
+				2CD8A139236FABD200A8E8A2 /* AlertTextFieldContainer.xib in Resources */,
+				2CD8A135236FABD200A8E8A2 /* SeparatorContainer.xib in Resources */,
+				2CD8A13B236FABD200A8E8A2 /* ActionButtonContainer.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,8 +445,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SwiftHelpers_Tests/Pods-SwiftHelpers_Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
@@ -369,8 +452,6 @@
 				"${BUILT_PRODUCTS_DIR}/SwiftHelpers/SwiftHelpers.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
@@ -388,8 +469,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CD8A134236FABD200A8E8A2 /* SeparatorView.swift in Sources */,
 				EC4EC77E222EF1F5003A9B08 /* String.swift in Sources */,
 				EC6C455B224E0BB200E1110B /* KeyboardViewController.swift in Sources */,
+				2CD8A13E236FABD200A8E8A2 /* CustomAlertController.swift in Sources */,
 				EC6C4552224E0B5700E1110B /* UIImage.swift in Sources */,
 				EC4EC791222EF32E003A9B08 /* ObjectAssociation.swift in Sources */,
 				EC6C4559224E0BA100E1110B /* XibView.swift in Sources */,
@@ -405,21 +488,26 @@
 				EC6C454B224E0B5700E1110B /* NSMutableAttributedString.swift in Sources */,
 				EC4EC77C222EF1CE003A9B08 /* NSObject.swift in Sources */,
 				EC6C4555224E0B5700E1110B /* UITableView.swift in Sources */,
+				2CD8A13A236FABD200A8E8A2 /* AlertAction.swift in Sources */,
 				EC6C4550224E0B5700E1110B /* UIColor.swift in Sources */,
 				EC6C4551224E0B5700E1110B /* UIButton.swift in Sources */,
 				EC6C454E224E0B5700E1110B /* UIView.swift in Sources */,
 				EC6C454C224E0B5700E1110B /* UITextField.swift in Sources */,
 				EC9D65B72236EA6000A66D8A /* PropertyReflectable.swift in Sources */,
 				EC4EC778222EEF76003A9B08 /* NSManagedObjectContext.swift in Sources */,
+				2CD8A138236FABD200A8E8A2 /* AlertTextField.swift in Sources */,
 				EC6C454F224E0B5700E1110B /* UIViewController.swift in Sources */,
 				EC631A30223A7E2C00425A8C /* Int.swift in Sources */,
 				ECC53500223853B20056908A /* Encodable.swift in Sources */,
 				EC4EC79A222EF571003A9B08 /* CommonHelpers.swift in Sources */,
 				EC6C453C224E0AAF00E1110B /* Localizable.swift in Sources */,
+				2CD8A13D236FABD200A8E8A2 /* AlertAnimationController.swift in Sources */,
 				EC6C454D224E0B5700E1110B /* CGColor.swift in Sources */,
 				ECB9A5AD2241A3760060168B /* JSONEncoder.swift in Sources */,
+				2CD8A13C236FABD200A8E8A2 /* ActionButton.swift in Sources */,
 				EC6C453E224E0ABA00E1110B /* LabelsCapableView.swift in Sources */,
 				EC6C455D224E0BC400E1110B /* UICommonHelpers.swift in Sources */,
+				2CD8A137236FABD200A8E8A2 /* AlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
