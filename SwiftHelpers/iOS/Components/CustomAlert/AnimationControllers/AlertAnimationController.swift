@@ -5,11 +5,9 @@ class AlertAnimationController: NSObject, UIViewControllerAnimatedTransitioning 
         case present, dismiss
     }
     private let action: Action
-    private let alertView: AlertView
     
-    init(action: Action, view: AlertView) {
+    init(action: Action) {
         self.action = action
-        self.alertView = view
     }
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
@@ -24,25 +22,22 @@ class AlertAnimationController: NSObject, UIViewControllerAnimatedTransitioning 
         
         switch action {
         case .present:
-            toVC.view.backgroundColor = .clear
-            alertView.transform = CGAffineTransform(scaleX: 1.24, y: 1.24)
-            alertView.alpha = 0
+            let alertVC = toVC as! CustomAlertController
+            
+            alertVC.prepareTo(.present)
+            
             containerView.addSubview(toVC.view)
             
-            UIView.animate(withDuration: duration, animations: {
-                toVC.view.backgroundColor = AlertBackgroundView.color
-                self.alertView.transform = CGAffineTransform(scaleX: 1, y: 1)
-                self.alertView.alpha = 1
-            }) { _ in
+            alertVC.animateTransition(for: .present, duration: duration) { finished in
                 transitionContext.completeTransition(true)
             }
         case .dismiss:
-            fromVC.view.backgroundColor = AlertBackgroundView.color
-            UIView.animate(withDuration: duration, animations: {
-                fromVC.view.backgroundColor = .clear
-                self.alertView.alpha = 0
-            }) { _ in
-                fromVC.view.removeFromSuperview()
+            let alertVC = fromVC as! CustomAlertController
+            
+            alertVC.prepareTo(.dismiss)
+            
+            alertVC.animateTransition(for: .dismiss, duration: duration) { finished in
+                alertVC.view.removeFromSuperview()
                 transitionContext.completeTransition(true)
             }
         }

@@ -8,6 +8,7 @@ public class AlertAction {
     }
     
     weak var alertController: CustomAlertController!
+    var style: Style!
     private var handler: Handler?
     public private(set) var buttonContainer = ActionButtonContainer()
     var isEnable: Bool = true {
@@ -17,6 +18,7 @@ public class AlertAction {
     }
     
     public init(title: String, style: AlertAction.Style, handler: AlertAction.Handler? = nil) {
+        self.style = style
         self.handler = handler
         
         buttonContainer.actionButton.setTitle(title, for: .normal)

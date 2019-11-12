@@ -43,8 +43,6 @@ public class ActionButtonContainer: UIView {
     private func commonInit() {
         Bundle(for: ActionButtonContainer.self).loadNibNamed("ActionButtonContainer", owner: self, options: nil)
         
-        self.heightAnchor.constraint(equalToConstant: 44).isActive = true
-        
         self.addSubview(containerView)
         containerView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

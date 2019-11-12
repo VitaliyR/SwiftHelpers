@@ -21,7 +21,7 @@ public enum Colors {
             return UIColor { traitCollection -> UIColor in
                 switch traitCollection.userInterfaceStyle {
                 case .dark:
-                    return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.3)
+                    return #colorLiteral(red: 0.09803921569, green: 0.09803921569, blue: 0.1098039216, alpha: 0.4)
                 default:
                     return #colorLiteral(red: 0.09803921569, green: 0.09803921569, blue: 0.1098039216, alpha: 0.3)
                 }

@@ -1,27 +1,24 @@
 import UIKit
 
 public class CustomAlertController: UIViewController {
+    public enum Style: String {
+        case alert = "alertController"
+        case actionSheet = "actionSheetController"
+    }
+    
     @IBOutlet var alertView: AlertView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var messageLabel: UILabel!
-    @IBOutlet var textFieldsStackView: UIStackView!
     @IBOutlet var bottomView: UIView!
     @IBOutlet var buttonsStackView: UIStackView!
-    @IBOutlet var alertWidthConstraint: NSLayoutConstraint!
-    @IBOutlet var containerBottonConstraint: NSLayoutConstraint!
+    @IBOutlet var buttonsScrollView: UIScrollView! // TODO: add scroll view to alert (style == .alert)
     
-    private var textFieldContainers = [AlertTextFieldContainer]()
-    public var textFields: [AlertTextField] {
-        return textFieldContainers.map { container in
-            return container.textField
-        }
-    }
-    
+    private var alertStyle: Style!
     private var alertTitle: String?
     private var alertMessage: String?
     public private(set) var actions = [AlertAction]()
-    
     private var buttonsStackViewAxis: NSLayoutConstraint.Axis {
+        guard alertStyle == .alert else { return .vertical }
         if actions.count > 2 { return .vertical }
         
         let separatorsWidth: CGFloat = (actions.count > 0) ? CGFloat(actions.count - 1) : 0
@@ -42,18 +39,45 @@ public class CustomAlertController: UIViewController {
         
         return .horizontal
     }
-    
-    public static func create(title: String?, message: String?) -> CustomAlertController {
-        let storyboard = UIStoryboard(name: "CustomAlert", bundle: Bundle(for: CustomAlertController.self))
-        let vc = storyboard.instantiateInitialViewController() as! CustomAlertController
-        
-        vc.alertTitle = title
-        vc.alertMessage = message
-        vc.modalPresentationStyle = .custom
-        vc.transitioningDelegate = vc
-        
-        return vc
+    private var actionButtonHeight: CGFloat {
+        switch alertStyle {
+        case .alert:
+            return 44
+        case .actionSheet:
+            return 57
+        default:
+            fatalError()
+        }
     }
+    
+    
+    // MARK: alert style
+    @IBOutlet var textFieldsStackView: UIStackView!
+    @IBOutlet var alertWidthConstraint: NSLayoutConstraint!
+    @IBOutlet var containerBottonConstraint: NSLayoutConstraint!
+    
+    private var textFieldContainers = [AlertTextFieldContainer]()
+    public var textFields: [AlertTextField] {
+        return textFieldContainers.map { container in
+            return container.textField
+        }
+    }
+    
+    
+    // MARK: actionSheet style
+    @IBOutlet var alertViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet var alertViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet var footerView: UIView!
+    @IBOutlet var cancelActionContainer: UIView!
+    
+    private var cancelAction: AlertAction?
+    private var startPositionAlertView: CGFloat { // need for actionSheet alert start position only
+        guard alertViewTopConstraint != nil else { return 0 }
+        let top = alertViewTopConstraint.constant
+        
+        return min( 24 + (alertTitle == nil ? 0 : 16) + (alertMessage == nil ? 0 : 16) + (alertTitle == nil || alertMessage == nil ? 0 : 8) + CGFloat(actions.count) * (actionButtonHeight + 1) + (cancelAction == nil ? 0 : actionButtonHeight + 8), UIScreen.main.bounds.height - top )
+    }
+
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -79,21 +103,35 @@ public class CustomAlertController: UIViewController {
         }
     }
     
-    override public func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        configure()
-    }
-    
     override public func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         if let textFieldContainer = textFieldContainers.first {
             textFieldContainer.textField.becomeFirstResponder()
         }
+        if buttonsScrollView != nil { // TODO: remove this if statement after adding buttons scroll view to alert (style == .alert)
+            buttonsScrollView.delaysContentTouches = buttonsStackView.frame.height != buttonsScrollView.frame.height
+        }
     }
     
     deinit {
         NotificationCenter.default.removeObserver(self)
+    }
+}
+
+// MARK: - methods
+extension CustomAlertController {
+    public static func create(title: String?, message: String?, style: Style) -> CustomAlertController {
+        let storyboard = UIStoryboard(name: "CustomAlert", bundle: Bundle(for: CustomAlertController.self))
+        let vc = storyboard.instantiateViewController(withIdentifier: style.rawValue) as! CustomAlertController
+        
+        vc.alertTitle = title
+        vc.alertMessage = message
+        vc.alertStyle = style
+        vc.modalPresentationStyle = .custom
+        vc.transitioningDelegate = vc
+        
+        return vc
     }
     
     public func addTextField(configurationHandler: (_ textField: AlertTextField) -> Void) {
@@ -104,9 +142,28 @@ public class CustomAlertController: UIViewController {
     
     public func addAction(_ action: AlertAction) {
         action.alertController = self
-        actions.append(action)
+        
+        let existCancelAction = alertStyle == .actionSheet ? cancelAction : (actions.filter { $0.style == .cancel }.first)
+        guard existCancelAction == nil else {
+            fatalError("Must be only one cancel action.")
+        }
+        
+        switch alertStyle {
+        case .alert:
+            actions.append(action)
+        case .actionSheet:
+            if action.style == .cancel {
+                cancelAction = action
+            } else {
+                actions.append(action)
+            }
+        default:
+            fatalError("Alert must have alert style.")
+        }
     }
     
+    
+    // MARK: helpers
     private func setTitle(_ title: String?) {
         titleLabel.isHidden = title == nil
         titleLabel.text = title
@@ -144,6 +201,31 @@ public class CustomAlertController: UIViewController {
         }
     }
     
+    private func setCancelAction() {
+        let isHidden = cancelAction == nil
+        
+        footerView.isHidden = isHidden
+        (footerView.constraints + footerView.superview!.constraints).forEach { constraint in
+            if constraint.firstItem as? UIView == footerView || constraint.secondItem as? UIView == footerView {
+                constraint.isActive = !isHidden
+            }
+        }
+        
+        if let cancelAction = cancelAction {
+            cancelActionContainer.subviews.forEach { view in
+                view.removeFromSuperview()
+            }
+            cancelActionContainer.addSubview(cancelAction.buttonContainer)
+            cancelAction.buttonContainer.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                cancelAction.buttonContainer.topAnchor.constraint(equalTo: cancelActionContainer.topAnchor),
+                cancelAction.buttonContainer.bottomAnchor.constraint(equalTo: cancelActionContainer.bottomAnchor),
+                cancelAction.buttonContainer.leftAnchor.constraint(equalTo: cancelActionContainer.leftAnchor),
+                cancelAction.buttonContainer.rightAnchor.constraint(equalTo: cancelActionContainer.rightAnchor)
+            ])
+        }
+    }
+    
     private func configure() {
         if let title = alertTitle, let message = alertMessage {
             setTitle(title)
@@ -158,12 +240,19 @@ public class CustomAlertController: UIViewController {
             fatalError("Must be at least one alert property: title or message.")
         }
         
-        toggleTextFieldsStackView(textFieldContainers.count != 0)
-        for textFieldContainer in textFieldsStackView.arrangedSubviews {
-            textFieldContainer.removeFromSuperview()
-        }
-        for textFieldContainer in textFieldContainers {
-            textFieldsStackView.addArrangedSubview(textFieldContainer)
+        switch alertStyle {
+        case .alert:
+            toggleTextFieldsStackView(textFieldContainers.count != 0)
+            for textFieldContainer in textFieldsStackView.arrangedSubviews {
+                textFieldContainer.removeFromSuperview()
+            }
+            for textFieldContainer in textFieldContainers {
+                textFieldsStackView.addArrangedSubview(textFieldContainer)
+            }
+        case .actionSheet:
+            setCancelAction()
+        default:
+            fatalError("Alert must have alert style.")
         }
         
         buttonsStackView.axis = buttonsStackViewAxis
@@ -173,6 +262,7 @@ public class CustomAlertController: UIViewController {
         }
         for index in 0..<actions.count {
             buttonsStackView.addArrangedSubview(actions[index].buttonContainer)
+            actions[index].buttonContainer.heightAnchor.constraint(equalToConstant: actionButtonHeight).isActive = true
             
             if index == actions.count - 1 { continue }
             addButtonsSeparator()
@@ -191,16 +281,58 @@ public class CustomAlertController: UIViewController {
                 fatalError()
             }
         }
-        
+    }
+    
+    func prepareTo(_ action: AlertAnimationController.Action) {
+        switch action {
+        case .present:
+            configure()
+            
+            view.backgroundColor = .clear
+            switch alertStyle {
+            case .alert:
+                alertView.transform = CGAffineTransform(scaleX: 1.24, y: 1.24)
+                alertView.alpha = 0
+            case .actionSheet:
+                alertView.transform = CGAffineTransform(translationX: 0, y: (startPositionAlertView + alertViewBottomConstraint.constant))
+            default:
+                fatalError("Alert must have alert style.")
+            }
+        case .dismiss:
+            view.backgroundColor = Colors.backgroundColor
+        }
+    }
+    
+    func animateTransition(for action: AlertAnimationController.Action, duration: TimeInterval, completionHandler: @escaping (_ finished: Bool) -> Void) {
+        UIView.animate(withDuration: duration, delay: 0, options: .curveEaseIn, animations: {
+            switch action {
+            case .present:
+                self.view.backgroundColor = Colors.backgroundColor
+                self.alertView.transform = .identity
+                self.alertView.alpha = 1
+            case .dismiss:
+                self.view.backgroundColor = .clear
+                switch self.alertStyle {
+                case .alert:
+                    self.alertView.alpha = 0
+                case .actionSheet:
+                    self.alertView.transform = CGAffineTransform(translationX: 0, y: (self.alertView.frame.height + self.alertViewBottomConstraint.constant))
+                default:
+                    fatalError("Alert must have alert style.")
+                }
+            }
+        }) { finished in
+            completionHandler(finished)
+        }
     }
 }
 
 extension CustomAlertController: UIViewControllerTransitioningDelegate {
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return AlertAnimationController(action: .present, view: alertView)
+        return AlertAnimationController(action: .present)
     }
     
     public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return AlertAnimationController(action: .dismiss, view: alertView)
+        return AlertAnimationController(action: .dismiss)
     }
 }
