@@ -17,6 +17,7 @@ public class CustomAlertController: UIViewController {
     private var alertTitle: String?
     private var alertMessage: String?
     public private(set) var actions = [AlertAction]()
+    public var preferredAction: AlertAction?
     private var buttonsStackViewAxis: NSLayoutConstraint.Axis {
         guard alertStyle == .alert else { return .vertical }
         if actions.count > 2 { return .vertical }
@@ -263,6 +264,9 @@ extension CustomAlertController {
         for index in 0..<actions.count {
             buttonsStackView.addArrangedSubview(actions[index].buttonContainer)
             actions[index].buttonContainer.heightAnchor.constraint(equalToConstant: actionButtonHeight).isActive = true
+            if preferredAction === actions[index] {
+                actions[index].buttonContainer.makePreferred()
+            }
             
             if index == actions.count - 1 { continue }
             addButtonsSeparator()

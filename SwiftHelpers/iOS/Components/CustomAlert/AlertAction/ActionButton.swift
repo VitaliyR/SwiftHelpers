@@ -9,7 +9,6 @@ class ActionButton: UIButton {
         switch style {
         case .cancel:
             titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
-            fallthrough
         case .destructive:
             setTitleColor(#colorLiteral(red: 0.862745098, green: 0.3137254902, blue: 0.2352941176, alpha: 1), for: .normal)
         default:
@@ -17,6 +16,10 @@ class ActionButton: UIButton {
         }
         setTitleColor(titleColor(for: .normal)?.withAlphaComponent(0.8), for: .highlighted)
         setTitleColor(titleColor(for: .normal)?.withAlphaComponent(0.4), for: .disabled)
+    }
+    
+    func prefer() {
+        titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
     }
     
     fileprivate func updateEdgeInsets(hasImage: Bool) {
@@ -64,5 +67,9 @@ public class ActionButtonContainer: UIView {
             imageView.isHidden = true
         }
         actionButton.updateEdgeInsets(hasImage: image != nil)
+    }
+    
+    func makePreferred() {
+        actionButton.prefer()
     }
 }
