@@ -13,9 +13,28 @@ public class CustomAlertController: UIViewController {
     @IBOutlet var buttonsStackView: UIStackView!
     @IBOutlet var buttonsScrollView: UIScrollView! // TODO: add scroll view to alert (style == .alert)
     
+    internal static var alertQueue = [CustomAlertController]() {
+        didSet {
+            if alertQueue.count < oldValue.count { // item has been removed
+                guard let alertToShow = alertQueue.first else {
+                    isAnyAlertShowing = false
+                    return
+                }
+                alertToShow.present()
+            } else if alertQueue.count >= 2 {
+                isAnyAlertShowing = true
+            }
+        }
+    }
+    private static var isAnyAlertShowing = false
+    
+    private weak var rootController: UIViewController?
+    private var animatedShowing: Bool?
+    private var completionHandler: (() -> Void)?
+    
     private var alertStyle: Style!
-    private var alertTitle: String?
-    private var alertMessage: String?
+    public var alertTitle: String?
+    public var alertMessage: String?
     public private(set) var actions = [AlertAction]()
     public var preferredAction: AlertAction?
     private var buttonsStackViewAxis: NSLayoutConstraint.Axis {
@@ -133,6 +152,26 @@ extension CustomAlertController {
         vc.transitioningDelegate = vc
         
         return vc
+    }
+    
+    public func present(via controller: UIViewController, animated: Bool, completionHandler: (() -> Void)? = nil) {
+        CustomAlertController.alertQueue.append(self)
+        
+        if CustomAlertController.isAnyAlertShowing { // save data for showing alert later
+            self.rootController = controller
+            self.animatedShowing = animated
+            self.completionHandler = completionHandler
+        } else {
+            controller.present(self, animated: animated, completion: completionHandler)
+        }
+    }
+    
+    private func present() {
+        guard let controller = rootController, let animated = animatedShowing else {
+            CustomAlertController.alertQueue.remove(at: 0)
+            return
+        }
+        controller.present(self, animated: animated, completion: completionHandler)
     }
     
     public func addTextField(configurationHandler: (_ textField: AlertTextField) -> Void) {

@@ -11,9 +11,9 @@ public class AlertAction {
     var style: Style!
     private var handler: Handler?
     public private(set) var buttonContainer = ActionButtonContainer()
-    var isEnable: Bool = true {
+    public var isEnabled: Bool = true {
         didSet {
-            buttonContainer.actionButton.isEnabled = isEnable
+            buttonContainer.actionButton.isEnabled = isEnabled
         }
     }
     
@@ -28,7 +28,9 @@ public class AlertAction {
     
     @objc private func buttonClicked(_ sender: UIButton) {
         handler?(self)
-        alertController.dismiss(animated: true)
+        alertController.dismiss(animated: true, completion: {
+            CustomAlertController.alertQueue.remove(at: 0)
+        })
     }
     
     public func setImage(_ image: UIImage) {

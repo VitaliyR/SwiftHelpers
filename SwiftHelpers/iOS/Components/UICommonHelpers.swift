@@ -1,11 +1,18 @@
 import UIKit
 
 public extension CommonHelpers {
-    static func presentMessage(title: String? = nil, message: String? = nil, via controller: UIViewController, handler: (() -> Void)? = nil) {
-        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertVC.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: { (a) in handler?() }))
-        alertVC.preferredAction = alertVC.actions.first
-        controller.present(alertVC, animated: true)
+    static func presentMessage(title: String? = nil, message: String? = nil, via controller: UIViewController, isCustomAlert: Bool = false, handler: (() -> Void)? = nil) {
+        if isCustomAlert {
+            let alertVC = CustomAlertController.create(title: title, message: message, style: .alert)
+            alertVC.addAction(AlertAction(title: "OK".localized, style: .default, handler: { (a) in handler?() }))
+            alertVC.preferredAction = alertVC.actions.first
+            alertVC.present(via: controller, animated: true)
+        } else {
+            let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            alertVC.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: { (a) in handler?() }))
+            alertVC.preferredAction = alertVC.actions.first
+            controller.present(alertVC, animated: true)
+        }
     }
     
     static func getChildControllers(for window: UIWindow) -> [UIViewController] {
