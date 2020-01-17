@@ -11,7 +11,11 @@ public class CustomAlertController: UIViewController {
     @IBOutlet var messageLabel: UILabel!
     @IBOutlet var bottomView: UIView!
     @IBOutlet var buttonsStackView: UIStackView!
-    @IBOutlet var buttonsScrollView: UIScrollView! // TODO: add scroll view to alert (style == .alert)
+    @IBOutlet var buttonsScrollView: UIScrollView!
+    
+    // style === .alert
+    @IBOutlet var bottomSeparator: SeparatorContainer?
+    @IBOutlet var bottomScrollView: UIScrollView?
     
     internal static var alertQueue = [CustomAlertController]() {
         didSet {
@@ -324,6 +328,9 @@ extension CustomAlertController {
                 fatalError()
             }
         }
+        
+        bottomScrollView?.delegate = self
+        bottomSeparator?.alpha = 0
     }
     
     func prepareTo(_ action: AlertAnimationController.Action) {
@@ -377,5 +384,22 @@ extension CustomAlertController: UIViewControllerTransitioningDelegate {
     
     public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return AlertAnimationController(action: .dismiss)
+    }
+}
+
+extension CustomAlertController: UIScrollViewDelegate {
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard scrollView == bottomScrollView else { return }
+        guard let bottomSeparator = self.bottomSeparator else { return }
+        
+        let scrollTop = scrollView.contentOffset.y
+        
+        if scrollTop <= 0 {
+            bottomSeparator.alpha = 0
+        } else if bottomSeparator.alpha == 0 {
+            UIView.animate(withDuration: 0.3) {
+                bottomSeparator.alpha = 1
+            }
+        }
     }
 }
