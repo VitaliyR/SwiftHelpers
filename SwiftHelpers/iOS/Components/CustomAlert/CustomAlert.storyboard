@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,24 +11,24 @@
         <!--Custom Alert Controller-->
         <scene sceneID="ONB-wM-5bv">
             <objects>
-                <viewController storyboardIdentifier="alertController" id="PoZ-wR-sRl" customClass="CustomAlertController" customModule="SwiftHelpers_Tests" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ETd-r2-3Qb" customClass="AlertBackgroundView" customModule="SwiftHelpers_Tests" customModuleProvider="target">
+                <viewController storyboardIdentifier="alertController" id="PoZ-wR-sRl" customClass="CustomAlertController" customModule="SwiftHelpers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ETd-r2-3Qb" customClass="AlertBackgroundView" customModule="SwiftHelpers" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yAB-yz-YBA" userLabel="Container">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1B0-1o-yAX" customClass="AlertView" customModule="SwiftHelpers_Tests" customModuleProvider="target">
-                                        <rect key="frame" x="75" y="357.5" width="264" height="181"/>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1B0-1o-yAX" customClass="AlertView" customModule="SwiftHelpers" customModuleProvider="target">
+                                        <rect key="frame" x="75" y="357.5" width="264" height="181.5"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ptg-SA-4Yt" customClass="AlertForegroundView" customModule="SwiftHelpers_Tests" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="264" height="181"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ptg-SA-4Yt" customClass="AlertForegroundView" customModule="SwiftHelpers" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="264" height="181.5"/>
                                                 <subviews>
                                                     <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kes-bX-uqw">
-                                                        <rect key="frame" x="0.0" y="0.0" width="264" height="181"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="264" height="181.5"/>
                                                         <view key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Yo4-cC-SW8">
-                                                            <rect key="frame" x="0.0" y="0.0" width="264" height="181"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="264" height="181.5"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="sOe-Yp-FnQ">
@@ -48,7 +48,7 @@
                                                                         </label>
                                                                     </subviews>
                                                                 </stackView>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2dI-ph-i9z" customClass="SeparatorContainer" customModule="SwiftHelpers_Tests" customModuleProvider="target">
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2dI-ph-i9z" customClass="SeparatorContainer" customModule="SwiftHelpers" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="85.5" width="264" height="1"/>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                     <constraints>
@@ -74,7 +74,7 @@
                                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PyQ-2k-neM">
                                                                                     <rect key="frame" x="0.0" y="50" width="264" height="45"/>
                                                                                     <subviews>
-                                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3np-YF-sWL" customClass="SeparatorContainer" customModule="SwiftHelpers_Tests" customModuleProvider="target">
+                                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3np-YF-sWL" customClass="SeparatorContainer" customModule="SwiftHelpers" customModuleProvider="target">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="264" height="1"/>
                                                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                                             <constraints>
@@ -84,7 +84,7 @@
                                                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="PZF-y3-dxz">
                                                                                             <rect key="frame" x="0.0" y="1" width="264" height="44"/>
                                                                                             <subviews>
-                                                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KT9-f9-9bu" customClass="ActionButton" customModule="SwiftHelpers_Tests" customModuleProvider="target">
+                                                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KT9-f9-9bu" customClass="ActionButton" customModule="SwiftHelpers" customModuleProvider="target">
                                                                                                     <rect key="frame" x="0.0" y="0.0" width="131.5" height="44"/>
                                                                                                     <constraints>
                                                                                                         <constraint firstAttribute="height" constant="44" id="kNb-mj-GxH"/>
@@ -146,8 +146,6 @@
                                                                         <constraint firstItem="cVH-27-pyK" firstAttribute="height" secondItem="dnd-dX-uK5" secondAttribute="height" priority="350" id="wH7-t7-2G5"/>
                                                                         <constraint firstItem="cVH-27-pyK" firstAttribute="leading" secondItem="dnd-dX-uK5" secondAttribute="leading" id="yTq-hx-89y"/>
                                                                     </constraints>
-                                                                    <viewLayoutGuide key="contentLayoutGuide" id="tah-Rg-kCh"/>
-                                                                    <viewLayoutGuide key="frameLayoutGuide" id="8RV-Bw-U9O"/>
                                                                 </scrollView>
                                                             </subviews>
                                                             <constraints>
@@ -204,11 +202,11 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="yAB-yz-YBA" secondAttribute="bottom" id="E7C-z2-A9r"/>
-                            <constraint firstItem="yAB-yz-YBA" firstAttribute="leading" secondItem="ETd-r2-3Qb" secondAttribute="leading" id="Gxj-di-fJv"/>
-                            <constraint firstAttribute="trailing" secondItem="yAB-yz-YBA" secondAttribute="trailing" id="Ng9-ta-r2y"/>
+                            <constraint firstItem="yAB-yz-YBA" firstAttribute="leading" secondItem="f93-co-axn" secondAttribute="leading" id="Gxj-di-fJv"/>
+                            <constraint firstItem="f93-co-axn" firstAttribute="trailing" secondItem="yAB-yz-YBA" secondAttribute="trailing" id="Ng9-ta-r2y"/>
                             <constraint firstItem="yAB-yz-YBA" firstAttribute="top" secondItem="ETd-r2-3Qb" secondAttribute="top" id="fDy-nj-VTh"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="IV1-Bb-p9B"/>
+                        <viewLayoutGuide key="safeArea" id="f93-co-axn"/>
                     </view>
                     <connections>
                         <outlet property="alertView" destination="1B0-1o-yAX" id="9PK-d9-Eg1"/>
@@ -230,18 +228,18 @@
         <!--Custom Alert Controller-->
         <scene sceneID="dwe-uu-JDA">
             <objects>
-                <viewController storyboardIdentifier="actionSheetController" id="Glv-Sy-gBF" customClass="CustomAlertController" customModule="SwiftHelpers_Tests" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hfL-Wz-FqL" customClass="AlertBackgroundView" customModule="SwiftHelpers_Tests" customModuleProvider="target">
+                <viewController storyboardIdentifier="actionSheetController" id="Glv-Sy-gBF" customClass="CustomAlertController" customModule="SwiftHelpers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hfL-Wz-FqL" customClass="AlertBackgroundView" customModule="SwiftHelpers" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U0E-47-oX1" userLabel="Container">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E7g-I9-kUB" customClass="AlertView" customModule="SwiftHelpers_Tests" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E7g-I9-kUB" customClass="AlertView" customModule="SwiftHelpers" customModuleProvider="target">
                                         <rect key="frame" x="8" y="609" width="398" height="245"/>
                                         <subviews>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m7O-t7-n13" customClass="AlertForegroundView" customModule="SwiftHelpers_Tests" customModuleProvider="target">
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m7O-t7-n13" customClass="AlertForegroundView" customModule="SwiftHelpers" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="398" height="180"/>
                                                 <subviews>
                                                     <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vek-Oh-hnJ">
@@ -270,7 +268,7 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S1T-Ba-OU3">
                                                                     <rect key="frame" x="0.0" y="64" width="398" height="116"/>
                                                                     <subviews>
-                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0q-0Z-xWg" customClass="SeparatorContainer" customModule="SwiftHelpers_Tests" customModuleProvider="target">
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0q-0Z-xWg" customClass="SeparatorContainer" customModule="SwiftHelpers" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="0.0" width="398" height="1"/>
                                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                             <constraints>
@@ -290,7 +288,7 @@
                                                                                             </constraints>
                                                                                             <state key="normal" title="Button"/>
                                                                                         </button>
-                                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5BT-xA-SKG" customClass="SeparatorContainer" customModule="SwiftHelpers_Tests" customModuleProvider="target">
+                                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5BT-xA-SKG" customClass="SeparatorContainer" customModule="SwiftHelpers" customModuleProvider="target">
                                                                                             <rect key="frame" x="0.0" y="57" width="398" height="1"/>
                                                                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                                             <constraints>
@@ -316,8 +314,6 @@
                                                                                 <constraint firstAttribute="bottom" secondItem="wO6-tI-MtM" secondAttribute="bottom" id="hho-LG-joI"/>
                                                                                 <constraint firstAttribute="height" secondItem="wO6-tI-MtM" secondAttribute="height" priority="250" id="yU6-pc-BHq"/>
                                                                             </constraints>
-                                                                            <viewLayoutGuide key="contentLayoutGuide" id="gqh-p4-67e"/>
-                                                                            <viewLayoutGuide key="frameLayoutGuide" id="23C-Mx-Wlo"/>
                                                                         </scrollView>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -359,7 +355,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U37-pC-qJm" customClass="AlertForegroundView" customModule="SwiftHelpers_Tests" customModuleProvider="target">
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U37-pC-qJm" customClass="AlertForegroundView" customModule="SwiftHelpers" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="188" width="398" height="57"/>
                                                 <subviews>
                                                     <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pc7-Ah-nRf">
@@ -423,11 +419,11 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="top" secondItem="U0E-47-oX1" secondAttribute="top" id="4qG-VY-tlo"/>
-                            <constraint firstItem="U0E-47-oX1" firstAttribute="leading" secondItem="hfL-Wz-FqL" secondAttribute="leading" id="9wp-pf-Q4r"/>
+                            <constraint firstItem="U0E-47-oX1" firstAttribute="leading" secondItem="Sc4-7j-RLd" secondAttribute="leading" id="9wp-pf-Q4r"/>
                             <constraint firstItem="U0E-47-oX1" firstAttribute="bottom" secondItem="hfL-Wz-FqL" secondAttribute="bottom" id="fDM-XP-oA9"/>
-                            <constraint firstAttribute="trailing" secondItem="U0E-47-oX1" secondAttribute="trailing" id="qz5-pB-G8e"/>
+                            <constraint firstItem="Sc4-7j-RLd" firstAttribute="trailing" secondItem="U0E-47-oX1" secondAttribute="trailing" id="qz5-pB-G8e"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="dJP-0z-33j"/>
+                        <viewLayoutGuide key="safeArea" id="Sc4-7j-RLd"/>
                     </view>
                     <connections>
                         <outlet property="alertView" destination="E7g-I9-kUB" id="p9g-O5-2xV"/>
