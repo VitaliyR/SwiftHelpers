@@ -99,7 +99,11 @@ public class CustomAlertController: UIViewController {
         guard alertViewTopConstraint != nil else { return 0 }
         let top = alertViewTopConstraint.constant
         
-        return min( 24 + (alertTitle == nil ? 0 : 16) + (alertMessage == nil ? 0 : 16) + (alertTitle == nil || alertMessage == nil ? 0 : 8) + CGFloat(actions.count) * (actionButtonHeight + 1) + (cancelAction == nil ? 0 : actionButtonHeight + 8), UIScreen.main.bounds.height - top )
+        let titlePos: CGFloat = alertTitle == nil ? 0 : 16
+        let messagePos: CGFloat = alertMessage == nil ? 0 : 16
+        let cancelPos: CGFloat = cancelAction == nil ? 0 : actionButtonHeight + 8
+        
+        return min(24 + titlePos + messagePos + (alertTitle == nil || alertMessage == nil ? 0 : 8) + CGFloat(actions.count) * (actionButtonHeight + 1) + cancelPos, UIScreen.main.bounds.height - top )
     }
 
     
